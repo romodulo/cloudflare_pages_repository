@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import AnyComponent from './any-component.js'
+import { AnyComponent } from './any-component.js'
 
 // createApp({ setup(){
 //     const count = ref(0)
@@ -12,6 +12,4 @@ import AnyComponent from './any-component.js'
 //   `
 // }).mount('#app')
 
-const app = createApp(AnyComponent)
-app.mount('#app')
-
+createApp(AnyComponent).mount('#app')
