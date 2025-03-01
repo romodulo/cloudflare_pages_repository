@@ -1,0 +1,3 @@
+< 3-1>  <18:53>
+overarching--memo: main changes made to main-app ; actions: add css file, add 2nd-component <<app-2>>
+; todo: check TODO--directory, do-I need to delete file: "AnyComponent.js", 

@@ -6,9 +6,9 @@ export default {
       return { count }
   },
   template: `
-      <button @click="count++">
-          You clicked me {{ count }} times app-component.
-      </button>
+    <div class="displayNone">
+      this-displays--None
+    </div>
   `
 }
 

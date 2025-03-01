@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
-import AnyComponent from './any-component.js'
+import AComponent from './a-component.js'
+import BComponent from './b-component.js'
 
 // createApp({ setup(){
 //     const count = ref(0)
@@ -12,6 +13,9 @@ import AnyComponent from './any-component.js'
 //   `
 // }).mount('#app')
 
-const app = createApp(AnyComponent)
-app.mount('#app')
+
+
+createApp(AComponent).mount('#app')
+
+createApp(BComponent).mount('#app-2')
 
