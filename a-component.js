@@ -3,7 +3,8 @@ import { ref } from 'vue'
 export default {
   setup(){
       const count = ref(0)
-      return { count }
+      const date = ref()
+      return { count, date }
   },
   template: `
       <p>
@@ -23,6 +24,10 @@ export default {
       <button class="button-with-class-width">
         Button
       </button>
+
+      <p-datepicker v-model="date"></p-datepicker>
+      <br /> <br />
+      {{ date }}
       
       <p>}</p>
       <p></p>

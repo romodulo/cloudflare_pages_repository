@@ -9,3 +9,4 @@ organize code-structure, create-archive-dir,
 
 
 < 3-24>  <23:26>  <<First-Commit>>:  modify a-component.js ("template--option"); create const "app" in main.js; mount app to dom-element-id  app; 
+checkpoint of < 3-24>  <23:29>:  created, modified, included all types of code:  result:   unstable application;

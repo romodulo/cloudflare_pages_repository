@@ -16,6 +16,8 @@ import BComponent from './b-component.js'
 
 
 const app = createApp(AComponent)
+app.use(Primevue.Config, {theme: {preset: PrimeVue.Themes.Aura}})
+app.component('p-datepicker', PrimeVue.DatePicker)
 app.mount('#app')
 
 createApp(BComponent).mount('#app-2')

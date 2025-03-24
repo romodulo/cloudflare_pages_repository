@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PrimeVue + CDN</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/primevue/umd/primevue.min.js"></script>
+    <script src="https://unpkg.com/@primevue/themes/umd/aura.min.js"></script>
+
+  </head>
+  <body>
+    <div id="app">
+      <p-datepicker v-model="date"></p-datepicker>
+      <br /><br />
+      {{ date }}
+
+        <p-cascadeselect v-model="selectedCity" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" class="w-56" placeholder="Select a City" />
+
+        <div class="bg-surface-50 dark:bg-surface-950 p-10">
+            <div class="bg-surface-0 dark:bg-surface-900 p-6 shadow rounded-border">
+                <div class="text-3xl font-medium text-surface-900 dark:text-surface-0 mb-2">Card Title</div>
+                <div class="font-medium text-surface-500 dark:text-surface-300 mb-4">Vivamus id nisl interdum, blandit augue sit amet, eleifend mi.</div>
+                <div class="h-[150px] border-2 border-dashed border-surface" />
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script>
+      const { createApp, ref } = Vue;
+
+      const app = createApp({
+        setup() {
+          const date = ref();
+          const selectedCity = ref();
+          const countries = ref([
+            {"US": [
+                {"California": ["San Francisco", "San Jose"]},
+                {"Oregon": ["Portland", "Ohio"]},
+            ]},
+            {"Europe": [
+                {"UK" : [
+                    "London", "Manchester"
+                ]},
+                {"Spain" : [
+                    "Barcelona", "Madrid"
+                ]},
+            ]}
+        ])
+
+          return {
+            date, selectedCity, countries
+          };
+        },
+      });
+
+      app.use(PrimeVue.Config, {
+        theme: {
+            preset: PrimeVue.Themes.Aura
+        }
+      });
+
+      app.component('p-datepicker', PrimeVue.DatePicker);
+      app.component('p-casecadeselect', PrimeVue.CascadeSelect);
+
+      app.mount('#app');
+    </script>
+  </body>
+</html>
