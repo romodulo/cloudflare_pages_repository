@@ -15,7 +15,8 @@ import BComponent from './b-component.js'
 
 
 
-createApp(AComponent).mount('#app')
+const app = createApp(AComponent)
+app.mount('#app')
 
 createApp(BComponent).mount('#app-2')
 
